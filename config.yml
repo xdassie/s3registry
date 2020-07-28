@@ -1,0 +1,21 @@
+version: 0.1
+log:
+    fields:
+        service: registry
+http:
+    addr: :5000
+storage:
+    cache:
+        layerinfo: inmemory
+    s3:
+        accesskey: {MINIO_ACCESS_KEY}
+        secretkey: {MINIO_SECRET_KEY}
+        region: {REGION}
+        regionendpoint: {REGION_ENDPOINT}
+        bucket: {BUCKET_NAME}
+        encrypt: false
+        secure: true
+        v4auth: true
+        chunksize: 5242880
+        rootdirectory: /
+        
